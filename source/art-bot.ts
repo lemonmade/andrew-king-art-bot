@@ -112,11 +112,11 @@ export default {
       (result): result is Stored => result != null,
     );
 
-    console.log('New paintings found!');
-    console.log(newResults);
-
     const firstNewResult = newResults.at(0);
     if (firstNewResult == null) return;
+
+    console.log('New paintings found!');
+    console.log(newResults);
 
     // @see https://developer.vonage.com/en/messaging/sms/code-snippets/send-an-sms
     const response = await fetch('https://rest.nexmo.com/sms/json', {
