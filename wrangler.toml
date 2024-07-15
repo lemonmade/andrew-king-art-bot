@@ -1,7 +1,7 @@
 #:schema node_modules/wrangler/config-schema.json
 
 name = "andrew-king-art-bot"
-main = "source/index.ts"
+main = "source/art-bot.ts"
 compatibility_date = "2024-05-29"
 
 # Needed for the browser binding

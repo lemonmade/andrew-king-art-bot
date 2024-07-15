@@ -30,6 +30,10 @@ export default {
   ): Promise<void> {
     const browser = await puppeteer.launch(env.BROWSER as any);
     const page = await browser.newPage();
+    // Chrome 126
+    await page.setUserAgent(
+      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+    );
     await page.goto('https://www.andrewkingart.ca/s/shop');
 
     // Page is client-side rendered, wait until there is some content in the #app element
